@@ -1,33 +1,43 @@
 package Library.Main;
 
 public class Book {
-    private String author;
-    private String title;
 
-    public String getAuthor() {
-        return author;
-    }
+    private final String title;
+    private final int id;
+    private final String author;
+    private final int year;
 
-    public void setAuthor(String author) {
+    public Book(String author,String title, int year, int id) {
         this.author = author;
+        this.year = year;
+        this.id = id;
+        this.title = title;
     }
 
     public String getTitle() {
         return title;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
-    }
-//    private String year;
-
-    private Book() {
+    public String getAuthor() {
+        return author;
     }
 
-    public Book(String author, String title) {
-        this.author = author;
-        this.title = title;
+    public int getYear() {
+        return year;
+    }
+
+    public int getId() {
+        return id;
     }
 
 
+    @Override
+    public String toString() {
+        return "Book{" +
+                "title='" + title + '\'' +
+                ", id=" + id +
+                ", author='" + author + '\'' +
+                ", year=" + year +
+                '}';
+    }
 }
